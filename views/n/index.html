@@ -26,8 +26,9 @@
     <script>
         document.getElementById('firstForm').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent default form submission
-
-            // Here you can perform any form validation before showing the second form
+            
+            // Hide the first form
+            document.getElementById('firstForm').style.display = 'none';
             
             // Show the second form
             document.getElementById('secondForm').style.display = 'block';
