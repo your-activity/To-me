@@ -1,0 +1,7 @@
+# You can fill this out and rename it to use it as a .env file.
+
+# Set your Owncast access token that you created in the admin.
+OWNCAST_ACCESS_TOKEN=abc123
+
+# Your Owncast server URL
+OWNCAST_INSTANCE=https://my.server/
