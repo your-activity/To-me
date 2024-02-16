@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Form</title>
+</head>
+<body>
+    <h2>First Form</h2>
+    <form id="firstForm">
+        <input type="text" name="name" placeholder="Enter your name" required>
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Second Form (Initially Hidden) -->
+    <div id="secondForm" style="display: none;">
+        <h2>Second Form</h2>
+        <form id="secondForm">
+            <input type="text" name="age" placeholder="Enter your age" required>
+            <input type="text" name="address" placeholder="Enter your address" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('firstForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Here you can perform any form validation before showing the second form
+            
+            // Show the second form
+            document.getElementById('secondForm').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
